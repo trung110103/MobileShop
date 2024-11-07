@@ -1,0 +1,409 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+    background-color: #333; /* Màu nền của menu */
+    margin: 0 auto; /* Căn giữa menu */
+    position: relative; /* Đặt vị trí tương đối cho menu */
+}
+
+.menu ul {
+    list-style-type: none; /* Loại bỏ dấu chấm */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Sử dụng flexbox để sắp xếp các mục menu */
+    justify-content: center; /* Căn giữa ngang */
+}
+
+.menu ul li {
+    padding-right: 10px;
+    margin-right: 10px; /* Khoảng cách giữa các mục */
+}
+
+.menu ul li:last-child {
+    margin-right: 0; /* Xóa khoảng cách của mục cuối cùng */
+}
+
+.menu ul li a {
+    display: block;
+    color: white; /* Màu chữ */
+    text-align: center;
+    padding: 14px 16px; /* Khoảng cách giữa các mục */
+    text-decoration: none;
+    position: relative; /* Đặt vị trí tương đối cho các nút */
+    overflow: hidden; /* Ẩn phần viền */
+}
+
+/* Animation */
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Chạy theo bottom */
+    width: 0;
+    height: 4px; /* Độ rộng của con rắn */
+    background-color: red; /* Màu của con rắn */
+    transition: all 2s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+    left: 0; /* Bắt đầu từ vị trí bên trái ngoài */
+}
+
+/* Animation keyframes */
+@keyframes snakeRun {
+    100% {
+        left: 100%; /* Di chuyển đến vị trí bên phải ngoài */
+    }
+}
+#ftb_taikhoan {
+    min-height: 1000px;
+}
+#tb_taikhoan {
+    border-collapse: collapse;
+    width: 80%; /* Chiều rộng của bảng */
+    margin-left: 10%; /* Canh trái 10% */
+    margin-right: 10%; /* Canh phải 10% */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+#tb_taikhoan th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#tb_taikhoan th {
+    background-color: #f2f2f2;
+}
+
+#tb_taikhoan tr:hover {
+    background-color: #f5f5f5;
+}
+#ftb_taikhoan h1{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Định dạng cho modal */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Độ rộng của modal */
+}
+
+.modal-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 20px;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+/* Định dạng cho các input và label */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Căn theo bottom */
+    font-size: 18px;
+}
+
+.form-group label {
+    margin-right: 10px; /* Khoảng cách giữa label và input */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] , .form-group select,.form-group input[type="file"]{
+    flex: 1; /* Input chiếm phần còn lại của không gian */
+}
+
+
+/* Căn nội dung form vào giữa */
+.modal-form {
+    text-align: left;
+}
+
+/* Định dạng cho nút "Hủy" */
+.modal-form input[type="button"],input[type="submit"]{
+    background-color: #ccc;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.modal-form input[type="text"],select{
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+}
+/* Tùy chỉnh nút chọn file */
+.modal-form input[type="file"] {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Tạo hiệu ứng hover cho nút chọn file */
+  .modal-form input[type="file"]:hover {
+    background-color: #e6e6e6;
+  }
+  
+  /* Tùy chỉnh phần hiển thị tên file đã chọn */
+  .modal-form input[type="file"]::file-selector-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-right: 8px;
+  }
+  
+  /* Tạo hiệu ứng hover cho phần hiển thị tên file đã chọn */
+  .modal-form input[type="file"]::file-selector-button:hover {
+    background-color: #45a049;
+  }
+.modal-form select {
+    -webkit-appearance: none;
+    border: 2px solid black;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('path/to/dropdown-arrow.png') no-repeat right center;
+    padding-right: 25px; /* Tạo khoảng trống cho biểu tượng mũi tên */
+  }
+  
+  /* Tạo kiểu cho option */
+.modal-form option {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 8px 12px;
+  }
+  
+  /* Tạo kiểu khi option được hover */
+.modal-form option:hover {
+    background-color: #e6e6e6;
+  }
+.modal-body .bt{
+    text-align: center;
+}
+.modal-form input[type="button"]:hover ,input[type="submit"]:hover {
+    background-color: #999;
+}
+#searchInput {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    text-align: right;
+}
+#searchInput input {
+    font-size: 16px;
+    text-align: left;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+#searchInput input[type="text"]{
+    width: 220px;    
+}
+#searchInput input[type="button"]{
+    text-align: center;
+    background-color: #99CC66;
+}
+#searchInput input[type="button"]:hover{
+    background-color: #45a049;
+}
+#admin-container{
+    padding-bottom: 50px;
+}
+#tensanpham {
+    text-transform: uppercase;
+}
+.wait-processing {
+    background-color: #ffc107; /* Màu vàng */
+    color: #212529; /* Màu chữ đen */
+}
+
+.confirmed {
+    background-color: #28a745; /* Màu xanh lá cây */
+    color: #ffffff; /* Màu chữ trắng */
+}
+.wait-processing:hover ,.confirmed:hover,.error:hover,.completed:hover{
+    background-color: red !important;
+}
+.error {
+    background-color: #dc3545; /* Màu đỏ */
+    color: #ffffff; /* Màu chữ trắng */
+}
+
+.completed {
+    background-color: #007bff; /* Màu xanh dương */
+    color: #ffffff; /* Màu chữ trắng */
+}
+
+.unknown {
+    background-color: #6c757d; /* Màu xám */
+    color: #ffffff; /* Màu chữ trắng */
+}
+
+#thongtin {
+    width: 100%;
+    height: auto; /* Allows height to adjust based on content */
+    min-height: 100px; /* Sets a minimum height */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: none; /* Prevents user from resizing the textarea */
+    overflow: auto;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+/* Optional: Add focus styles for better user experience */
+#thongtin:focus {
+    border-color: #4CAF50; /* Border color when focused */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add a subtle shadow */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+    color:black;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Close button style */
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#bieudo {
+    margin: 20px auto; /* căn giữa */
+    width: 80%; /* chiều rộng tổng thể */
+    max-width: 600px; /* giới hạn chiều rộng tối đa */
+    border: 1px solid #ccc; /* đường viền */
+    padding: 20px; /* khoảng cách bên trong */
+    border-radius: 8px; /* bo góc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* đổ bóng */
+    background-color: #f9f9f9; /* màu nền */
+}
+
+#bieudo .title {
+    text-align: center; /* căn giữa tiêu đề */
+    margin-bottom: 20px; /* khoảng cách với phần nội dung */
+}
+
+#bieudo .title h1 {
+    color: #333; /* màu chữ cho tiêu đề */
+    font-size: 24px; /* cỡ chữ tiêu đề */
+    font-family: Arial, sans-serif; /* font chữ */
+}
+#bieudo canvas {
+    display: block; /* làm cho canvas tràn đầy */
+    margin: 0 auto; /* căn giữa canvas */
+    width: 100%; /* chiều rộng canvas */
+    max-width: 100%; /* giới hạn chiều rộng tối đa của canvas */
+    height: auto; /* chiều cao tự động điều chỉnh */
+}
+
+#bieudo .button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bieudo .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#bieudo .btn:hover {
+    background-color: #0056b3;
+}
+
+
+#output {
+    align-self: flex-end; /* Đặt button "Xuất file" ở bên phải */
+    margin-top: 10px; /* Khoảng cách giữa button "Xuất file" và biểu đồ */
+}
+
+

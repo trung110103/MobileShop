@@ -1,0 +1,237 @@
+/* Center the form_infor div */
+.menu-user-container {
+    padding-left: 300px;
+    display: flex;
+    align-items: flex-start; /* Căn chỉnh các thành phần vào cùng lề trên */
+    background-color: gray;
+}
+#user-container {
+    background-color: #C0C0C0;
+    margin: 35px 290px 35px 0px;
+    width: calc(100% - 310px); /* Chiều rộng sẽ giảm đi 290px để lưu trữ không gian cho lề phải */
+    border-radius: 15px; /* Bo tròn cả 4 góc */
+    min-height: 800px;
+}
+#danhmucMenu_user {
+    list-style-type: none;
+    padding: 20px ;
+    width: 250px;
+}
+#danhmucMenu_user #title_user {
+    text-transform: uppercase;
+    font-size: 18px;
+    background-color:#111111;
+    border-radius: 10px 10px 0px 0px;
+    padding: 15px 10px;
+    color:white;
+}
+#danhmucMenu_user li {
+    font-size:18px;
+    display: flex;
+    align-items: center;
+}
+
+#danhmucMenu_user input[type="radio"] {
+    display: none;
+}
+
+#danhmucMenu_user label {
+    padding: 15px 30px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    width: 100%;
+    font-size:16px;
+    border-bottom: 1px solid #ccc; /* Tạo border dưới */
+}
+
+#danhmucMenu_user input[type="radio"]:checked + label {
+    background-color: #ccc;
+}
+/* Center the form_infor div */
+#form_infor {
+    min-height: 660px;
+    border-radius:10px;
+    margin: 50px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#form_infor h1 {
+    margin-bottom: 20px;
+}
+
+/* Style the table */
+table.infor_1 {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #00FFFF;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table.infor_1 th, table.infor_1 td {
+    padding: 15px;
+    border: 1px solid #00FFFF	;
+    text-align: left;
+}
+
+table.infor_1 th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+table.infor_1 td {
+    background-color: #fff;
+}
+
+table.infor_1 input[type="text"] {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1em;
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#btnSubmit {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#btnSubmit:hover {
+    background-color: #0056b3;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content_1 {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+#passwordForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#passwordForm input,
+#passwordForm button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+#passwordForm button:hover {
+    background-color: #888;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+    
+    
+.container_1 .giohang{
+    width: 100%;
+    margin: 20px 0;
+}
+.container_1 table{
+    border-collapse: collapse;
+    background-color: #BBBBBB;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container_1 table, th, td {
+    border: 1px solid #00FFFF;
+}
+.container_1 th, td {
+    padding: 12px;
+    text-align: left;
+}
+.container_1 th {
+    background-color: #669966;
+    color: white;
+}
+.container_1 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.container_1 {
+    min-height: 660px;
+    border-radius:10px;
+    margin: 50px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container_1 .header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.delete-btn {
+    width: 100%;
+    background-color: #dc3545; /* Màu nền của button */
+    color: #fff; /* Màu chữ */
+    border: none; /* Không có viền */
+    padding: 10px; /* Độ dày và khoảng cách bên trong của button */
+    cursor: pointer; /* Con trỏ thành dấu nhấp chuột khi di chuột qua */
+    border-radius: 4px; /* Bo góc button */
+    font-size: 14px; /* Cỡ chữ */
+    margin-top: 20px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Màu nền khi di chuột qua */
+}
+
+.delete-btn:focus {
+    outline: none; /* Loại bỏ đường viền khi focus */
+}
+
+/* Nếu muốn thêm hiệu ứng chuyển đổi màu khi click */
+.delete-btn:active {
+    background-color: #bd2130; /* Màu nền khi click */
+}
+.status-processing {
+    color: #28a745; 
+}
+
+.status-confirmed {
+    color: #007bff; 
+}
+
+.status-error {
+    color: #dc3545; 
+}
+
+.status-comform {
+    color: #8B8B00; 
+}

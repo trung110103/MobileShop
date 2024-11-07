@@ -1,0 +1,251 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #00CC99;
+    padding: 20px 200px;
+}
+#logo {
+    text-transform: uppercase;
+    font-size: 35px;
+    color: red;
+}
+header nav ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0; /* Đảm bảo không có margin trên ul */
+    display: flex;
+    justify-content: space-between; /* Khoảng cách đều giữa các phần tử */
+    align-items: flex-end; /* Căn dưới cùng một dòng */
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+header nav ul li.search-box {
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+    margin-right: 0; /* Xóa khoảng cách bên phải của li này */
+}
+
+header nav ul li.search-box input {
+    font-size: 16px;
+}
+
+/* Xóa viền màu đen khi nhấn chuột vào ô nhập liệu */
+header nav ul li.search-box input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px; /* Bo tròn góc trái */
+    margin-right: 0; /* Xóa khoảng cách giữa ô nhập và nút tìm kiếm */
+    outline: none; /* Xóa viền mặc định khi nhấn chuột vào */
+}
+
+
+header nav ul li.search-box input[type="button"] {
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-left: none; /* Xóa viền trái để nối liền với ô nhập */
+    border-radius: 0 4px 4px 0; /* Bo tròn góc phải */
+    cursor: pointer;
+}
+
+header nav ul li.search-box input[type="button"]:hover {
+    background-color: #0056b3; /* Thay đổi màu khi hover */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+}
+.login {
+    background: white;
+    padding:30px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+.login input[type="text"],
+.login input[type="submit"] {
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #C0C0C0;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#bt_login {
+    text-decoration: none;
+    background-color: #4CAF50; /* Màu nền */
+    color: white; /* Màu chữ */
+    padding: 10px 20px; /* Độ lớn của button */
+    border: none; /* Loại bỏ viền */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+
+#bt_login:hover {
+    background-color: #45a049; /* Màu nền khi di chuột qua */
+}
+
+#bt_log{
+    background-color: #222222;
+    color:white;
+    font-size: 16px;
+}
+#bt_log:hover{
+    background-color:#45a049 ;
+}
+#bt_reg{
+    color: red;
+}
+input{
+    outline: none; /* Xóa viền mặc định khi nhấn chuột vào */
+}
+.center {
+    text-align: center;
+}
+.button-container {
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    display: flex;
+    margin-top: 20px;
+}
+
+.button-container button, .button-container a {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+    background-color: #dc3545; /* Màu đỏ giống với .bt_login */
+    border-radius: 10px;
+    text-decoration: none; /* Xóa gạch chân cho thẻ <a> */
+    display: inline-block; /* Đảm bảo thẻ <a> hoạt động như một nút */
+    color: white; /* Màu chữ */
+}
+
+/* Hiệu ứng hover */
+.button-container button:hover, .button-container a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
+/* CSS cho nút "Sửa thông tin" */
+#edit_infor {
+    border-radius: 10px;
+    background-color: #007bff; /* Màu xanh dương */
+}
+
+.menu {
+    background-color: #333; /* Màu nền của menu */
+    margin: 0 auto; /* Căn giữa menu */
+    position: relative; /* Đặt vị trí tương đối cho menu */
+}
+
+.menu ul {
+    list-style-type: none; /* Loại bỏ dấu chấm */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Sử dụng flexbox để sắp xếp các mục menu */
+    justify-content: center; /* Căn giữa ngang */
+}
+
+.menu ul li {
+    min-width: 200px;
+    padding-right: 10px;
+    margin-right: 10px; /* Khoảng cách giữa các mục */
+}
+
+.menu ul li:last-child {
+    margin-right: 0; /* Xóa khoảng cách của mục cuối cùng */
+}
+
+.menu ul li a {
+    display: block;
+    color: white; /* Màu chữ */
+    text-align: center;
+    padding: 14px 16px; /* Khoảng cách giữa các mục */
+    text-decoration: none;
+    position: relative; /* Đặt vị trí tương đối cho các nút */
+    overflow: hidden; /* Ẩn phần viền */
+}
+
+/* Animation */
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Chạy theo bottom */
+    width: 0;
+    height: 4px; /* Độ rộng của con rắn */
+    background-color: red; /* Màu của con rắn */
+    transition: all 2s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+    left: 0; /* Bắt đầu từ vị trí bên trái ngoài */
+}
+
+/* Animation keyframes */
+@keyframes snakeRun {
+    100% {
+        left: 100%; /* Di chuyển đến vị trí bên phải ngoài */
+    }
+}
+/* Định dạng cho input và button */
+.input-container {
+    display: block;
+    margin-top: 20px;
+}
+
+.input-container input[type="text"],
+.input-container button {
+    padding: 12px;
+    font-size: 16px;
+    width: calc(100% - 24px); /* Độ rộng tính toán để bù trừ padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Đảm bảo width tính cả border và padding */
+}
+
+.input-container button {
+    margin-top: 10px; /* Khoảng cách giữa input và button */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
